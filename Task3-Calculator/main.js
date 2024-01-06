@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function appendToDisplay(value) {
+        if (string.length >= 18) {
+            alert("Input too long");
+            return;
+        }
         string += value;
         display.textContent = string;
     }
