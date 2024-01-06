@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/head_logo.png" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap" rel="stylesheet">
+    <title>Sankalp Ahire | Contact Me</title>
+</head>
+<body>
+  <style>
+    * {
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        margin: 0; 
+    }
+    .navbar {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    @media (max-width: 764px) {
+      .navbar {
+       max-width: 100%;
+    }
+}
+    .navbar-brand {
+        padding-top: 20px;
+    }
+
+    .button-clear {
+        width: 115px;
+        height: 45px;
+        transition: all 0.5s ease;
+        color: black;
+        text-align: center;
+        line-height: 1;
+        font-size: 15px;
+        padding: 10px 20px;
+        outline: none;
+        text-decoration: none;
+    }
+
+    .button-clear:hover {
+        color: #6e07f3;
+    }
+
+    .head-logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    @media (max-width: 764px) {
+      .head-logo {
+       margin-top: 100px;
+    }
+}
+    .head-logo img {
+        height: 150px;
+        width: 1500px;
+    }
+
+    .button {
+      width: 115px;
+      height: 45px;
+      color: #6e07f3;
+      border: 3px solid #6e07f3;
+      text-align: center;
+      line-height: 1;
+      font-size: 15px;
+      background-color: transparent;
+      outline: none;
+      border-radius: 30px; 
+      transform: translateY(30px);
+      transition: all 0.3s ease-out 0.2s;
+      margin-top: -15px;
+  }
+    
+  .button:hover {
+      color: white;
+      background-color: #6e07f3;
+  }
+
+  .container-form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; 
+
+.btn-position {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .container-form {
+        padding: 0 10px; 
+    }
+}
+
+</style>
+
+<!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="padding-right: 30px; margin-top: 30px;">
+          <a class="navbar-brand" href="index.html">
+            <img src="/assets/img/_-logos_transparent.png" alt="" width="170px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="./say_hello.html" class="button-clear">Clear feild <i class="fa-solid fa-x"></i> </a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  <!-- head logo -->
+   <div class="head-logo" style="text-align: center ; height: 200px; width: 200px ;">
+     <img src="./assets/img/portfolio face logo.jpg" alt="logo" style="height: 200px; width: 200px ; ">
+    </div>
+  <!-- input form -->
+<div class="container-sm container-form">
+  <form id="contactForm">
+    <div class="mb-3">
+      <label for="name" class="form-label" >Your Name </label>
+      <input type="text" class="form-control" id="name" name="name" placeholder=" e.g., First Name Last Name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message here</label>
+      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+    </div>
+    <div class="btn-position"><button class="button" onclick="validateForm()">Submit</button></div>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value; 
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+
+    if (!email.includes("@")) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    
+
+  }
+</script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
