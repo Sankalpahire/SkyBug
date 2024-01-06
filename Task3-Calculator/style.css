@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(195,233,148,1) 100%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    width: 500px;
+    max-width: 100%;
+    margin: auto; 
+}
+
+.button:active {
+    transform: scale(0.94);
+}
+
+
+.button {
+    border: 1px solid black;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.button {
+    border : 1px solid black;
+}
+
+.display {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(154, 156, 157);
+}
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    padding-right: 10px;
+
+}
+
+.equals {
+   grid-column: 3/5;
+
+}
+
+div , button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+.orange {
+    background-color: #ff9500;
+}
+
+.light-gray{
+    background-color: #d4d4d2;
+}
+
+.dark-gray{
+    background-color: #505050;
+}
+
