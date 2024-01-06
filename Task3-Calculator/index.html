@@ -19,33 +19,76 @@
         <source src="./assets/click.mp3" type="audio/mp3">
     </audio>
 
-   
+    <div style="display: flex; flex-direction: column;">
 
-
-    <div class="container">
-        <div class="display">Created by Sankalp</div>
-        <button class="button cal-btn dark-gray">AC</button>
-        <button class="button cal-btn dark-gray">000</button>
-        <button class="button cal-btn dark-gray">%</button>
-        <button class="button cal-btn orange">/</button>
-        <button class="button cal-btn light-gray">7</button>
-        <button class="button cal-btn light-gray">8</button>
-        <button class="button cal-btn light-gray">9</button>
-        <button class="button cal-btn orange">*</button>
-        <button class="button cal-btn light-gray">4</button>
-        <button class="button cal-btn light-gray">5</button>
-        <button class="button cal-btn light-gray">6</button>
-        <button class="button cal-btn orange">-</button>
-        <button class="button cal-btn light-gray">1</button>
-        <button class="button cal-btn light-gray">2</button>
-        <button class="button cal-btn light-gray">3</button>
-        <button class="button cal-btn orange">+</button>
-        <button class="button cal-btn light-gray">0</button>
-        <button class="button cal-btn light-gray">.</button>
-        <button class="button cal-btn equals orange">=</button>
+        <div style="min-height: 100px; text-align: center;">
+            <h1 class="headingText" id="typingText"></h1>
+        </div>
+    
+        <div class="container">
+            <div class="display">0</div>
+            <div class="cal-container">
+    
+                <button class="button cal-btn dark-gray">AC</button>
+                <button class="button cal-btn dark-gray">00</button>
+                <button class="button cal-btn dark-gray">%</button>
+                <button class="button cal-btn orange">/</button>
+                <button class="button cal-btn light-gray">7</button>
+                <button class="button cal-btn light-gray">8</button>
+                <button class="button cal-btn light-gray">9</button>
+                <button class="button cal-btn orange">*</button>
+                <button class="button cal-btn light-gray">4</button>
+                <button class="button cal-btn light-gray">5</button>
+                <button class="button cal-btn light-gray">6</button>
+                <button class="button cal-btn orange">-</button>
+                <button class="button cal-btn light-gray">1</button>
+                <button class="button cal-btn light-gray">2</button>
+                <button class="button cal-btn light-gray">3</button>
+                <button class="button cal-btn orange">+</button>
+                <button class="button cal-btn light-gray" style="border-radius: 0 0 0 4px;">0</button>
+                <button class="button cal-btn light-gray">.</button>
+                <button class="button cal-btn equals orange" style="border-radius: 0 0 4px 0;">=</button>
+            </div>
+    
+        </div>
     </div>
+    <script>
 
- <script src="./main.js"></script>
+        const text = "Calculator by Sankalp Ahire";
+        const typingSpeed = 100;
+        const clearingSpeed = 50;
+        const loopDelay = 3000;
+
+        function typeText(element, text, index) {
+
+            if (index < text.length) {
+                element.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(() => typeText(element, text, index), typingSpeed);
+            } else {
+                setTimeout(() => clearText(element, text.length - 1), loopDelay);
+            }
+
+        }
+
+        function clearText(element, index) {
+            if (index >= 0) {
+                element.innerHTML = text.substring(0, index);
+                index--;
+                setTimeout(() => clearText(element, index), clearingSpeed);
+            } else {
+                // Text is fully cleared, start typing again
+                setTimeout(() => typeText(element, text, 0), clearingSpeed);
+            }
+        }
+
+        const heading = document.getElementById("typingText");
+        typeText(heading, text, 0);
+
+
+    </script>
+
+    <script src="./main.js"></script>
 
 </body>
 </html>
