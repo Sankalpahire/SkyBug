@@ -3,12 +3,15 @@
 }
 
 body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(0deg, #3498db, #9b59b6, #34495e);
+}
+.content-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    margin: 0;
-    background: linear-gradient(0deg, #3498db, #9b59b6, #34495e, #2ecc71);
+    margin-top: 50px;
 }
 
 .container {
