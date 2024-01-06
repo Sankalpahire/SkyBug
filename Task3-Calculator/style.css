@@ -6,14 +6,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     background: linear-gradient(0deg, #3498db, #9b59b6, #34495e, #2ecc71);
 }
 
 .container {
     width: 500px;
-    max-width: 100%;
+    max-width: calc(100vw - 50px);
     margin: auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -31,6 +31,7 @@ body {
     transform: scale(0.94);
 }
 .headingText{
+    overflow: auto;
     font-family: 'Dosis', sans-serif;
 }
 
@@ -49,6 +50,7 @@ body {
     min-height: 120px;
     border: 1px solid var(--display-clr);
     border-radius: 4px 4px 0 0;
+    overflow: auto;
 }
 @media only screen and (max-width: 600px) {
     .display {
