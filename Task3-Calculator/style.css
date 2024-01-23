@@ -1,0 +1,86 @@
+:root {
+    --display-clr: rgb(58, 58, 58);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(0deg, #3498db, #9b59b6, #34495e);
+}
+.content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container {
+    width: 500px;
+    max-width: calc(100vw - 50px);
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.cal-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    width: 100%;
+    max-width: 500px; 
+    margin: auto;
+}
+
+
+.button:active {
+    transform: scale(0.94);
+}
+.headingText{
+    overflow: auto;
+    font-family: 'Dosis', sans-serif;
+}
+
+.display {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-family: 'Dosis', sans-serif;
+    color: #d4d4d2;
+    background-color: var(--display-clr);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    padding-right: 10px;
+    min-height: 120px;
+    border: 1px solid var(--display-clr);
+    border-radius: 4px 4px 0 0;
+    overflow: auto;
+}
+@media only screen and (max-width: 600px) {
+    .display {
+        font-size: 24px;
+    }
+}
+.button {
+    position: relative;
+    border: 1px solid var(--display-clr);
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+.equals {
+    grid-column: 3/5;
+    background-color: #ff9500;
+}
+
+.orange {
+    background-color: #ff9500;
+}
+
+.light-gray {
+    background-color: #746f6f;
+}
+
+.dark-gray {
+    background-color: #505050;
+}
