@@ -1,0 +1,24 @@
+task 1 - a responsive landing page with apealing ui 
+
+task 2- portfolio web with multiple web pages contact form with validations  clean & neat ui bootstap5 used 
+
+task3- a functional calculator with error throw , input limit , handling with keyboadkeys , tap sound and transform on click , responsive 
+features added 
+
+task5- 
+user auth 
+login /register
+middle weres 
+momgodb used for db 
+used private routes to hide admin panel and access of pages without login
+express js used for api and http request handing 
+for security json web token (jwt) used 
+and more features added
+
+///
+pending work 
+due to deadline and other work can't able to finish whole task 
+so only 10 to 15 % of work pending (finishing work )
+filter & sort (backend)
+show data in cart when added to cart (backend )
+trending products rendering using api on front page 
